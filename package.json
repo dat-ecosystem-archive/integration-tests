@@ -1,0 +1,25 @@
+{
+  "name": "integration-tests",
+  "version": "1.0.0",
+  "description": "A mininet test suite for Dat implementations.",
+  "main": "index.js",
+  "scripts": {
+    "start": "NODE_PATH=`which node` node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/datprotocol/integration-tests.git"
+  },
+  "keywords": [
+    "dat",
+    "test",
+    "mininet"
+  ],
+  "author": "Paul Frazee <pfrazee@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/datprotocol/integration-tests/issues"
+  },
+  "homepage": "https://github.com/datprotocol/integration-tests#readme"
+}
