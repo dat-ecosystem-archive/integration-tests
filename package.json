@@ -4,7 +4,7 @@
   "description": "A mininet test suite for Dat implementations.",
   "main": "index.js",
   "scripts": {
-    "start": "NODE_PATH=`which node` node index.js",
+    "start": "NODE_PATH=`which node` node tests/001-replicate-dat.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
