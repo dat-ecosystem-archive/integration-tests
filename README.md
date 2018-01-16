@@ -13,5 +13,5 @@ npm install
 ## Usage
 
 ```
-npm start
+npm test
 ```

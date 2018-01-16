@@ -4,8 +4,7 @@
   "description": "A mininet test suite for Dat implementations.",
   "main": "index.js",
   "scripts": {
-    "start": "NODE_PATH=`which node` node tests/001-replicate-dat.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "tape tests/*"
   },
   "repository": {
     "type": "git",
@@ -21,5 +20,10 @@
   "bugs": {
     "url": "https://github.com/datprotocol/integration-tests/issues"
   },
-  "homepage": "https://github.com/datprotocol/integration-tests#readme"
+  "homepage": "https://github.com/datprotocol/integration-tests#readme",
+  "dependencies": {
+    "dat-node": "^3.5.6",
+    "tapenet": "^1.0.0",
+    "tempy": "^0.2.1"
+  }
 }
