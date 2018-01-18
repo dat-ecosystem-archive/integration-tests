@@ -46,8 +46,10 @@ test('share a dat between two nodes', function (t) {
 
   t.run(h2, function () {
     var Dat = require('dat-node')
+    var path = require('path')
+    var fixture = path.join(__dirname, '../../fixtures/dat1')
 
-    Dat('fixtures/dat1', {temp: true}, function (err, dat) {
+    Dat(fixture, {temp: true}, function (err, dat) {
       if (err) throw err
       dat.importFiles()
 
