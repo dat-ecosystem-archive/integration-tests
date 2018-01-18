@@ -4,7 +4,7 @@
   "description": "A mininet test suite for Dat implementations.",
   "main": "index.js",
   "scripts": {
-    "test": "tape tests/**/*"
+    "test": "tapenet tests/**/*"
   },
   "repository": {
     "type": "git",
@@ -24,7 +24,7 @@
   "dependencies": {
     "dat-node": "^3.5.6",
     "dns-discovery": "^5.6.1",
-    "tapenet": "^1.0.0",
+    "tapenet": "^1.2.0",
     "tempy": "^0.2.1"
   }
 }
