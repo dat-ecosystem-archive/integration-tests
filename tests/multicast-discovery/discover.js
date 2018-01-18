@@ -15,8 +15,10 @@ test('listening node (h1) discovers announcing node (h2)', function (t) {
       server: false
     })
     disc.on('peer', (name, peer) => {
-      t.ok(name, 'test-app')
-      console.log(name, peer)
+      t.same(name, 'test-app')
+      t.same(peer.port, 9090)
+      t.notEqual(peer.host, ip)
+      t.ok(typeof peer.host === 'string')
       t.end()
     })
     h1.emit('ready')

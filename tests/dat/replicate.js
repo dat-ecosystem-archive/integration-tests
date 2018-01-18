@@ -26,7 +26,7 @@ test('share a dat between two nodes', function (t) {
           t.pass('h1 got connection')
         })
 
-        console.log('Downloading dat://' + key)
+        t.pass('h1 downloading dat://' + key)
 
         var archive = dat.archive
         if (archive.content) contentReady()
@@ -35,7 +35,7 @@ test('share a dat between two nodes', function (t) {
         function contentReady () {
           t.pass('h1 content ready')
           archive.content.on('sync', function () {
-            console.log('Synced')
+            t.pass('h1 dat synced')
             // TODO tests
             t.end()
           })
@@ -60,7 +60,7 @@ test('share a dat between two nodes', function (t) {
         t.pass('h2 got connection')
       })
 
-      console.log('Sharing dat://' + dat.key.toString('hex'))
+      t.pass('h2 sharing dat://' + dat.key.toString('hex'))
       h2.emit('sharing', {key: dat.key.toString('hex')})
     })
   })
