@@ -1,11 +1,6 @@
 var test = require('tapenet')
 
-var h1 = test.createHost()
-var h2 = test.createHost()
-var s1 = test.createSwitch()
-
-h1.link(s1)
-h2.link(s1)
+var {h1, h2} = test.topologies.basic()
 
 test('listening node (h1) discovers announcing node (h2)', function (t) {
   t.run(h1, () => {

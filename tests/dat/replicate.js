@@ -1,11 +1,6 @@
 var test = require('tapenet')
 
-var h1 = test.createHost()
-var h2 = test.createHost()
-var s1 = test.createSwitch()
-
-h1.link(s1)
-h2.link(s1)
+var {h1, h2} = test.topologies.basic()
 
 test('share a dat between two nodes', function (t) {
   t.run(h1, function () {
